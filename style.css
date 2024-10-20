@@ -113,7 +113,7 @@ header {
 
 .overlay {
     position: absolute;
-    top : -220px;
+    top : -250px;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
