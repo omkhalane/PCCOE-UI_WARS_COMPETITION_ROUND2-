@@ -1,0 +1,446 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Neue', 'Sansita', Arial, sans-serif; /* Updated to use Comic Neue */
+    background-color: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: top 0.3s;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 50px;
+    background-color: white;
+    margin: 0 10px;
+}
+
+/* Menu Icon (Hoverboard) */
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    z-index: 191;
+    position: absolute;
+    margin-left: 78%;
+}
+
+.menu-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    padding: 20px 0;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: calc(2vw + 16px);
+    transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    color: #ff6347; /* Tomato color on hover */
+}
+
+/* Homepage Styles */
+.homepage {
+    position: relative;
+    height: 100vh;
+}
+
+.homepage-img {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top : -220px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width:80%;
+    text-align: center;
+    color: white;
+    
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.overlay h1 {
+    font-family: 'Vidaloka', sans-serif;
+    margin-right:10px;
+    margin-left: -200px;
+    font-size: 4rem;
+    min-width: 100%;
+    text-align: right;
+
+    text-shadow: 
+        0 0 5px #ffffff;
+       
+    
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* About Section */
+#about {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #111;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-family: 'Sansita', sans-serif; /* Ensure Comic Neue is applied */
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Models Section */
+#models {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #000000;
+}
+
+#models h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery-images-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.vdo {
+    background-color: #111;
+}
+
+.model {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.model img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.model h3 {
+    
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+/* Arrows */
+.arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.prev-arrow, .next-arrow {
+    cursor: pointer;
+    font-size: 2em;
+    padding: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    pointer-events: all;
+    transition: background 0.3s;
+}
+
+.prev-arrow:hover, .next-arrow:hover {
+    background: rgba(255, 99, 71, 0.8); /* Tomato color on hover */
+}
+
+/* Dots for Current Slide Indicator */
+.dots-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000000;
+    font-size: 1em;
+    font-family: 'Comic Neue', sans-serif; /* Apply Comic Neue to footer */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .overlay h1 {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1.2em;
+    }
+
+    .nav-menu ul li a {
+        font-size: calc(3vw + 12px);
+    }
+
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+
+    .prev-arrow, .next-arrow {
+        font-size: 1.5em;
+    }
+}
+
+/* Achievements Section */
+#achievements {
+    padding: 20px;
+    background-color: #000000; /* Dark background for the section */
+}
+
+.achievement {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer; /* Indicate that it can be clicked */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white; /* Change heading color */
+}
+
+h3 {
+    margin: 10px 0;
+    color: lightblue; /* Change year color */
+}
+
+.more-info {
+    background-color: #000000; /* Blue background for button */
+    color: white; /* White text color */
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 38%;
+    display: block; /* Make button full-width */
+    text-align: center; /* Center text in button */
+    font-family: 'Comic Neue', sans-serif; /* Apply Comic Neue to buttons */
+}
+
+.more-info:hover {
+    background-color: #000000; /* Darker blue on hover */
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: white; /* Change text color */
+}
+
+.details {
+    display: none; /* Hide details by default */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #222; /* Dark background for details */
+    border: 1px solid #444; /* Border for details */
+    border-radius: 5px;
+    font-family: 'Comic Neue', sans-serif; /* Apply Comic Neue to details */
+}
+
+/* Sponsors Section */
+#sponsors {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #000000; /* Dark background for contrast */
+}
+
+#sponsors h2 {
+    font-size: 2.5em;
+    margin-top: 2px;
+    color: white; /* Title color */
+    font-family: 'Comic Neue', sans-serif; /* Apply Comic Neue to sponsors title */
+}
+
+.sponsor-logos {
+    display: flex;
+    flex-wrap: wrap; /* Allow logos to wrap onto the next line */
+    justify-content: center; /* Center the logos */
+    gap: 40px; /* Space between logos */
+}
+
+.sponsor-logo {
+    width: 100px; /* Set a standard width for logos */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.1); /* Slightly enlarge logo on hover */
+}
+
+
+#get-in-touch h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffffff; /* Change to your preferred hover color */
+}
+
+.icon-instagram i {
+    color: #ffffff;
+}
+
+.icon-facebook i {
+    color: #ffffff;
+}
+
+.icon-twitter i {
+    color: #ffffff;
+}
+
+.icon-linkedin i {
+    color: #ffffff;
+}
+
+.icon-email i {
+    color: #ffffff;
+}
+.hoverboard {
+    display: none;
+}
+
+.hoverboard.open {
+    display: block; /* or flex, or however it's normally displayed */
+}
+.body {
+    background-color: black; /* Set a contrasting background for visibility */
+}
+
+.white-line {
+    border: none; /* Remove default border */
+    
+    height: 2px; 
+    width : 70% ;/* Set line height */
+    background-color: white; /* Set line color to white */
+    margin: 20px 0; 
+    margin-left: 15%; /* Add some margin for spacing */
+}}
+
