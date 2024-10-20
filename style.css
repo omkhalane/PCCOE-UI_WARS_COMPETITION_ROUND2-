@@ -127,11 +127,9 @@ header {
 
 .overlay h1 {
     font-family: 'Vidaloka', sans-serif;
-    margin-right:10px;
-    margin-left: -500px;
     font-size: 4rem;
     min-width: 100%;
-    text-align: right;
+    text-align: center;
 
     text-shadow: 
         0 0 5px #ffffff;
