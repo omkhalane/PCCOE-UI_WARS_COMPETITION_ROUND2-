@@ -322,7 +322,8 @@ h3 {
     border-radius: 5px;
     padding: 10px 15px;
     cursor: pointer;
-    margin-top: 10px;
+    justify-content:center;
+margin-top: 10px;
     margin-left: 38%;
     display: block; /* Make button full-width */
     text-align: center; /* Center text in button */
