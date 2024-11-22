@@ -72,7 +72,7 @@ Feel free to reach out for collaboration or feedback. 🚀
 
 ## 📝 License
 
-📄 This project is licensed under the **[MIT License](./LICENSE).**. Feel free to use and modify it as needed.  ## 📝 License
+📄 This project is licensed under the **[MIT License](./LICENSE).**. Feel free to use and modify it as needed.  
 
 
 
